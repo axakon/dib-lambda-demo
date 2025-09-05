@@ -1,0 +1,14 @@
+{
+  "name": "flights-api",
+  "private": true,
+  "scripts": {
+    "build:get": "esbuild lambda_get/src/index.ts --bundle --platform=node --target=node20 --format=cjs --outfile=lambda_get/dist/index.js",
+    "build:post": "esbuild lambda_post/src/index.ts --bundle --platform=node --target=node20 --format=cjs --outfile=lambda_post/dist/index.js",
+    "build": "npm run build:get && npm run build:post"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.134",
+    "esbuild": "^0.23.0",
+    "typescript": "^5.4.0"
+  }
+}
