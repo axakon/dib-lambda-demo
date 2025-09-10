@@ -8,3 +8,5 @@ package-lock.json
 
 terraform.*
 .terraform.*
+.localstack
+volume/
